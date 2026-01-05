@@ -1,6 +1,7 @@
 import { personalInfo } from "@/data/portfolioData";
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
+import profilePhoto from "@/assets/profile-photo.jpeg";
 
 const HeroSection = () => {
   const scrollToAbout = () => {
@@ -45,7 +46,7 @@ const HeroSection = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent rounded-full blur-xl opacity-50 scale-110" />
               <div className="relative w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-primary/50">
                 <img
-                  src={personalInfo.photo}
+                  src={profilePhoto}
                   alt={personalInfo.name}
                   className="w-full h-full object-cover"
                 />
