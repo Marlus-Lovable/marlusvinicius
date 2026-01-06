@@ -7,11 +7,6 @@ const OtherLinks = () => {
     <Layout>
       <section className="py-12 bg-background">
         <div className="container mx-auto px-6">
-          {/* Section Title */}
-          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-10 flex items-center gap-4">
-            <span className="w-2 h-8 bg-accent rounded-full" />
-            {contact.title}
-          </h2>
 
           {/* Contact Links */}
           <div className="max-w-2xl space-y-6">

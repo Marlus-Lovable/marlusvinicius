@@ -1,8 +1,11 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { personalInfo } from "@/data/portfolioData";
 import { Button } from "@/components/ui/button";
 
 const Header = () => {
+  const location = useLocation();
+  const currentPath = location.pathname;
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
@@ -18,10 +21,18 @@ const Header = () => {
 
         {/* Navigation Buttons */}
         <nav className="flex items-center gap-3">
-          <Button asChild variant="outline" size="sm">
+          <Button 
+            asChild 
+            variant={currentPath === "/projects" ? "default" : "outline"} 
+            size="sm"
+          >
             <Link to="/projects">Projects</Link>
           </Button>
-          <Button asChild variant="outline" size="sm">
+          <Button 
+            asChild 
+            variant={currentPath === "/other" ? "default" : "outline"} 
+            size="sm"
+          >
             <Link to="/other">Other links</Link>
           </Button>
         </nav>
