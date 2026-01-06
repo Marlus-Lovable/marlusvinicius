@@ -8,11 +8,6 @@ const Projects = () => {
     <Layout>
       <section className="py-12 bg-background">
         <div className="container mx-auto px-6">
-          {/* Section Title */}
-          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-10 flex items-center gap-4">
-            <span className="w-2 h-8 bg-accent rounded-full" />
-            Check some of the projects I've worked on:
-          </h2>
 
           {/* Projects Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
