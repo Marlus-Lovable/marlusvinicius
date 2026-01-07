@@ -48,7 +48,7 @@ export const projects = [
   {
     id: 1,
     title: "INDUSTRIAL TRAINING PLATFORM",
-    description: "Interactive virtual system created at AeonVR to simulate real industrial assembly processes. It allows companies to build customized training sessions using their own 3D models, guiding employees through assembly steps, tool usage, and quizzes in a flexible, immersive environment",
+    description: "Virtual system that simulates industrial assembly processes, enabling companies to create customized, immersive training experiences using their own 3D models.",
     tags: ["Unreal", "Blueprints", "Windows", "Dynamic Runtime Mesh", "Assimp", "Industrial", "Training"],
     image: industrialTrainingImage,
     videoUrl: null,
