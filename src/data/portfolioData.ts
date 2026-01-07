@@ -48,40 +48,48 @@ export const projects = [
   {
     id: 1,
     title: "INDUSTRIAL TRAINING PLATFORM",
+    slug: "industrial-training-platform",
     description: "Virtual system that simulates industrial assembly processes, enabling companies to create customized, immersive training experiences using their own 3D models.",
     tags: ["Unreal", "Blueprints", "Windows", "Dynamic Runtime Mesh", "Assimp", "Industrial", "Training"],
     image: industrialTrainingImage,
     videoUrl: null,
-    detailsUrl: "#",
-  },
-  {
-    id: 2,
-    title: "MOBILE PUZZLE GAME",
-    description: "Creation of an engaging puzzle game with innovative mechanics for mobile platforms, featuring intuitive touch controls and progressive difficulty.",
-    tags: ["Unity", "C#", "Mobile", "Android"],
-    image: null,
-    videoUrl: null,
-    detailsUrl: "#",
-  },
-  {
-    id: 3,
-    title: "ADVERTISING AR EXPERIENCE",
-    description: "Development of an augmented reality marketing campaign with marker tracking and 3D content integration for a major brand launch.",
-    tags: ["Unity", "Realidade Virtual", "C#", "WebGL"],
-    image: null,
-    videoUrl: null,
-    detailsUrl: "#",
-  },
-  {
-    id: 4,
-    title: "MULTIPLAYER ACTION GAME",
-    description: "Development of a real-time multiplayer combat system with responsive netcode, server architecture design and client prediction.",
-    tags: ["Unreal", "Blueprint", "Multiplayer", "Windows"],
-    image: null,
-    videoUrl: null,
-    detailsUrl: "#",
   },
 ];
+
+export const projectDetails: Record<string, {
+  youtubeEmbed: string;
+  extendedDescription: string;
+  technicalDetails: { label: string; value: string }[];
+  roleIntro: string;
+  rolePoints: string[];
+  outcomes: string[];
+}> = {
+  "industrial-training-platform": {
+    youtubeEmbed: "https://www.youtube.com/embed/Zzclm8R1dck",
+    extendedDescription: "Virtual system developed at AeonVR that simulates industrial assembly processes, enabling companies to create customized, immersive training experiences using their own 3D models.",
+    technicalDetails: [
+      { label: "Tools", value: "Unreal" },
+      { label: "Language", value: "Blueprints" },
+      { label: "Platform", value: "Windows" },
+      { label: "SDKs", value: "Assimp (for Runtime Mesh Editing)" },
+      { label: "Feats", value: "Local Persistent Data, Modular Architecture" },
+      { label: "Company", value: "AeonVR" },
+      { label: "Time Range", value: "Jan 2025 - May 2025 (~5 Months)" },
+    ],
+    roleIntro: "I contributed from the early concept phase through to the first stable release, focusing on Blueprint-based development and system architecture, as well as assisting with technical explanations for possible clients.",
+    rolePoints: [
+      "Shaped the foundation of my first Unreal Engine project by helping plan a dual-user training system, enabling one role to create structured trainings and another to execute them seamlessly.",
+      "Bridged real-world industrial workflows and virtual training, supporting the transformation of real assembly procedures and 3D asset data into interactive, guided training experiences.",
+      "Designed with scale in mind, contributing to architectural decisions that prepared the platform for future PC-VR support, cloud-based content updates, and user behavior tracking.",
+      "Improved usability for non-technical users by helping build an intuitive 3D spatial manipulation system, inspired by professional 3D editors but simplified for training creators.",
+      "Enhanced user onboarding and navigation by assisting in the implementation of the platform's main menu UI.",
+    ],
+    outcomes: [
+      "Project approved for future development, validating the solution and enabling planned feature expansions.",
+      "Built a modular and reusable system, allowing easy adaptation of the platform to different client needs.",
+    ],
+  },
+};
 
 export const services = [
   {

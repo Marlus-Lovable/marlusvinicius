@@ -104,7 +104,7 @@ const Projects = () => {
                     variant="outline"
                     className="mt-6 w-full border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground"
                   >
-                    <a href={project.detailsUrl} target="_blank" rel="noopener noreferrer">
+                    <a href={`/projects/${project.slug}`}>
                       View details
                       <ExternalLink className="ml-2 w-4 h-4" />
                     </a>
