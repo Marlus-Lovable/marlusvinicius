@@ -1,4 +1,5 @@
 // Centralized data file for easy future database integration
+import industrialTrainingImage from "@/assets/projects/industrial-training-platform.jpg";
 
 export const personalInfo = {
   name: "Marlus Vinicius",
@@ -47,9 +48,9 @@ export const projects = [
   {
     id: 1,
     title: "INDUSTRIAL TRAINING PLATFORM",
-    description: "Development of an immersive VR training simulation for industrial safety procedures, focusing on realistic interactions and performance optimization.",
-    tags: ["Unity", "Realidade Virtual", "C#", "Windows"],
-    image: null,
+    description: "Interactive virtual system created at AeonVR to simulate real industrial assembly processes. It allows companies to build customized training sessions using their own 3D models, guiding employees through assembly steps, tool usage, and quizzes in a flexible, immersive environment",
+    tags: ["Unreal", "Blueprints", "Windows", "Dynamic Runtime Mesh", "Assimp", "Industrial", "Training"],
+    image: industrialTrainingImage,
     videoUrl: null,
     detailsUrl: "#",
   },
