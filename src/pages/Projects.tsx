@@ -35,24 +35,25 @@ const Projects = () => {
 
                 {/* Content */}
                 <div className="p-6 flex-1 flex flex-col">
-                  <h3 className="text-lg font-bold text-foreground mb-4 group-hover:text-primary transition-colors">
+                  <h3 className="text-lg font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
 
-                  <ul className="space-y-3 flex-1">
-                    <li className="text-sm">
-                      <span className="font-semibold text-primary">Objective: </span>
-                      <span className="text-muted-foreground">{project.objective}</span>
-                    </li>
-                    <li className="text-sm">
-                      <span className="font-semibold text-primary">My Role: </span>
-                      <span className="text-muted-foreground">{project.role}</span>
-                    </li>
-                    <li className="text-sm">
-                      <span className="font-semibold text-primary">Challenge & Solution: </span>
-                      <span className="text-muted-foreground">{project.challenge}</span>
-                    </li>
-                  </ul>
+                  <p className="text-sm text-muted-foreground mb-4 flex-1">
+                    "{project.description}"
+                  </p>
+
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tags.map((tag, tagIndex) => (
+                      <span
+                        key={tagIndex}
+                        className="px-3 py-1 text-xs font-medium rounded-full border border-primary/50 text-primary bg-primary/5"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
 
                   <Button
                     asChild
