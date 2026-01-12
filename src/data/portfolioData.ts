@@ -1,7 +1,7 @@
 // Centralized data file for easy future database integration
 import industrialTrainingImage from "@/assets/projects/industrial-training-platform.jpg";
 import guidedVrTourImage from "@/assets/projects/guided-vr-tour.jpg";
-
+import tartarugaImage from "@/assets/projects/tartaruga-seas-essence.gif";
 export const personalInfo = {
   name: "Marlus Vinicius",
   title: "Game Programmer",
@@ -70,7 +70,7 @@ export const projects = [
     slug: "tartaruga-seas-essence",
     description: "Educational game for raising awareness about how environmental issues such as oil spills and improper waste disposal affect marine animals, using the turtle as a symbol.",
     tags: ["Unity", "Academic", "Serious Games", "Windows", "Behavior", "Flocks", "Job System", "Multithreading"],
-    image: "/placeholder.svg",
+    image: tartarugaImage,
     videoUrl: null,
   },
 ];
