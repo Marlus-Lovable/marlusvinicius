@@ -54,6 +54,15 @@ export const projects = [
     image: industrialTrainingImage,
     videoUrl: null,
   },
+  {
+    id: 2,
+    title: "GUIDED VR TOUR",
+    slug: "guided-vr-tour",
+    description: "Virtual reality experience that showcases the company's optical network solutions through an interactive, cross-platform environment, enabling remote, guided tours that highlight quality, precision, and innovation.",
+    tags: ["Unreal", "Multiplayer", "Cross-Platform", "Blueprints", "Virtual Reality", "Meta Quest", "Mobile", "Android", "Advertising", "Asymmetrical"],
+    image: "/placeholder.svg",
+    videoUrl: null,
+  },
 ];
 
 export const projectDetails: Record<string, {
