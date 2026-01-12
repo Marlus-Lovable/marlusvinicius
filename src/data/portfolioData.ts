@@ -1,5 +1,6 @@
 // Centralized data file for easy future database integration
 import industrialTrainingImage from "@/assets/projects/industrial-training-platform.jpg";
+import guidedVrTourImage from "@/assets/projects/guided-vr-tour.jpg";
 
 export const personalInfo = {
   name: "Marlus Vinicius",
@@ -59,8 +60,8 @@ export const projects = [
     title: "GUIDED VR TOUR",
     slug: "guided-vr-tour",
     description: "Virtual reality experience that showcases the company's optical network solutions through an interactive, cross-platform environment, enabling remote, guided tours that highlight quality, precision, and innovation.",
-    tags: ["Unreal", "Multiplayer", "Cross-Platform", "Blueprints", "Virtual Reality", "Meta Quest", "Mobile", "Android", "Advertising", "Asymmetrical"],
-    image: "/placeholder.svg",
+    tags: ["Unreal", "Multiplayer", "Cross-Platform", "Blueprints", "Virtual Reality", "Meta Quest", "Mobile", "Android", "Advertising", "Asymmetrical", "Hand Tracking", "EOS"],
+    image: guidedVrTourImage,
     videoUrl: null,
   },
 ];
