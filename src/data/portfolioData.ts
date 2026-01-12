@@ -73,6 +73,8 @@ export const projectDetails: Record<string, {
   roleIntro: string;
   rolePoints: string[];
   outcomes: string[];
+  additionalSections?: { title: string; points: string[] }[];
+  additionalVideoEmbed?: string;
 }> = {
   "industrial-training-platform": {
     youtubeEmbed: "https://www.youtube.com/embed/Zzclm8R1dck",
@@ -98,6 +100,47 @@ export const projectDetails: Record<string, {
       "Project approved for future development, validating the solution and enabling planned feature expansions.",
       "Built a modular and reusable system, allowing easy adaptation of the platform to different client needs.",
     ],
+  },
+  "guided-vr-tour": {
+    youtubeEmbed: "https://www.youtube.com/embed/k4SoFt65-7s",
+    extendedDescription: "Fibracem's Guided VR Tour is an immersive virtual reality experience developed to present Fibracem's optical network infrastructure solutions in an engaging and interactive way. The project showcases the company's products and manufacturing processes within a virtual environment designed to emphasize quality, precision, and innovation.\n\nThe experience was expanded from a single-user application into a multiplayer, cross-platform solution, enabling remote, guided tours through an asymmetric setup connecting VR headsets and tablets. By integrating real-time interaction, network synchronization, and cross-device communication, the project allows company representatives to guide clients through the virtual experience remotely. Built using technologies such as MetaXR, OpenXR, GDXR VR Template, and EOS Integration Kit, the project supports scalable, immersive presentations aligned with AeonVR's proprietary multiplayer platform.",
+    technicalDetails: [
+      { label: "Tools", value: "Unreal 5.5, Git, Azure DevOps" },
+      { label: "Language", value: "Blueprints" },
+      { label: "Platform", value: "Meta Quest 3/3S (Android) and Mobile Phone and Tablet (Android)" },
+      { label: "SDKs", value: "EOS Integration Kit (for server hosting and matchmaking), MetaXR, OpenXR and GDXR VR Template" },
+      { label: "Feats", value: "Hand Tracking, Asymmetrical Multiplayer, Runtime Replication, Crossplay" },
+      { label: "Company", value: "AeonVR" },
+      { label: "Type", value: "Outsourcing" },
+      { label: "Client Company", value: "Fibracem" },
+      { label: "Time Range", value: "June 2025 - October 2025 (~4 Months)" },
+      { label: "Team Size", value: "5 (3 Game Programmers, 1 UI Artist and 1 Project Manager)" },
+    ],
+    roleIntro: "Collaborated with a multidisciplinary team at AeonVR to evolve Fibracem's Guided VR Tour from two separate VR applications—one focused on manufacturing process demonstration and another serving as a product showroom—into a single, unified immersive experience.",
+    rolePoints: [
+      "Contributed to transforming the original single-user setup into a multiplayer, cross-platform application.",
+      "Helped design and implement an asymmetric setup connecting Meta Quest headsets and tablets, enabling remotely guided experiences.",
+      "Assisted in the development of network synchronization and cross-device communication systems to support real-time interaction between company representatives and clients.",
+      "Contributed to interactive systems that allowed representatives to guide users through both product showcases and manufacturing processes within one cohesive experience.",
+      "Worked with MetaXR, OpenXR, GDXR VR Template, and EOS Integration Kit, addressing challenges related to cross-platform compatibility, real-time interaction, and immersive consistency across devices.",
+    ],
+    outcomes: [
+      "Delivered a consolidated VR solution that unified product showroom and manufacturing process demonstrations into a single immersive experience.",
+      "Enabled more effective remote client engagement through guided, multiplayer interactions.",
+      "Supported AeonVR's strategy to expand and validate its proprietary multiplayer immersive platform.",
+    ],
+    additionalSections: [
+      {
+        title: "Process",
+        points: [
+          "Initially working with two programmers, used Unreal Engine's sublevel system to allow parallel work on the same map while minimizing Git conflicts, intentionally avoiding simultaneous edits to the same maps and Blueprints.",
+          "Adopted an informal file \"lock\" system to prevent multiple developers from modifying the same assets at the same time.",
+          "Implemented Blueprint replication directly within the actors themselves, with centralized and modularized UI acting as the main communication layer between different actors.",
+          "Followed an agile development methodology, including sprints, daily stand-ups, pull requests, and structured documentation in Notion for the programming team.",
+        ],
+      },
+    ],
+    additionalVideoEmbed: "https://www.youtube.com/embed/3XaCpB1EDmU",
   },
 };
 

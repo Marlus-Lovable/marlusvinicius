@@ -48,9 +48,9 @@ const ProjectDetail = () => {
             </ul>
           </div>
 
-          {/* My Role */}
+          {/* Contributions & Challenges */}
           <div className="mb-10">
-            <h2 className="text-2xl font-bold text-foreground mb-4">My Role</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-4">Contributions & Challenges</h2>
             <p className="text-muted-foreground mb-6 leading-relaxed">
               {details.roleIntro}
             </p>
@@ -64,6 +64,21 @@ const ProjectDetail = () => {
             </ul>
           </div>
 
+          {/* Additional Sections */}
+          {details.additionalSections?.map((section, sectionIndex) => (
+            <div key={sectionIndex} className="mb-10">
+              <h2 className="text-2xl font-bold text-foreground mb-4">{section.title}</h2>
+              <ul className="space-y-4">
+                {section.points.map((point, index) => (
+                  <li key={index} className="flex gap-3">
+                    <span className="text-primary mt-1">•</span>
+                    <span className="text-muted-foreground leading-relaxed">{point}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+
           {/* Outcomes */}
           <div className="mb-10">
             <h2 className="text-2xl font-bold text-foreground mb-4">Outcomes</h2>
@@ -76,6 +91,21 @@ const ProjectDetail = () => {
               ))}
             </ul>
           </div>
+
+          {/* Additional Video */}
+          {details.additionalVideoEmbed && (
+            <div className="mb-10">
+              <div className="aspect-video rounded-xl overflow-hidden shadow-2xl shadow-primary/10">
+                <iframe
+                  className="w-full h-full"
+                  src={details.additionalVideoEmbed}
+                  title={`${project.title} - Additional Video`}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          )}
         </div>
       </section>
     </Layout>
