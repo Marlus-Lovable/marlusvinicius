@@ -10,6 +10,8 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
+  // Base path for GitHub Pages - change "marlusvinicius" to your repo name
+  base: "/marlusvinicius/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
