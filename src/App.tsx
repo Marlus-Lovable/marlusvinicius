@@ -11,12 +11,8 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-const routerBasename =
-  import.meta.env.BASE_URL !== "/" &&
-  typeof window !== "undefined" &&
-  window.location.pathname.startsWith(import.meta.env.BASE_URL)
-    ? import.meta.env.BASE_URL
-    : "/";
+// Use BASE_URL only in production builds (GitHub Pages)
+const routerBasename = import.meta.env.PROD ? import.meta.env.BASE_URL : "/";
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
