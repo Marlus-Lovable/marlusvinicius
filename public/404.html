@@ -9,15 +9,32 @@
       // This script takes the current URL and converts the path and query
       // string into just a query string, and then redirects the browser
       // to the new URL with only a query string and hash fragment.
-      var pathSegmentsToKeep = 1; // Keep /marlusvinicius/ prefix
 
+      // If your site is deployed as a Project Page (https://user.github.io/<repo>/),
+      // we need to keep the repo segment. If it's a User/Org Page (https://user.github.io/), keep none.
+      // This auto-detects based on the first path segment.
       var l = window.location;
+      var repoName = "marlusvinicius";
+      var pathSegmentsToKeep = l.pathname.indexOf("/" + repoName + "/") === 0 ? 1 : 0;
+
       l.replace(
-        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
-        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
-        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-        l.hash
+        l.protocol +
+          "//" +
+          l.hostname +
+          (l.port ? ":" + l.port : "") +
+          l.pathname
+            .split("/")
+            .slice(0, 1 + pathSegmentsToKeep)
+            .join("/") +
+          "/?/" +
+          l.pathname
+            .slice(1)
+            .split("/")
+            .slice(pathSegmentsToKeep)
+            .join("/")
+            .replace(/&/g, "~and~") +
+          (l.search ? "&" + l.search.slice(1).replace(/&/g, "~and~") : "") +
+          l.hash
       );
     </script>
   </head>
