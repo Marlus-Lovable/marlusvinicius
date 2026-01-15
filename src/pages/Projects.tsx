@@ -1,4 +1,5 @@
 import { useState, useMemo } from "react";
+import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import { projects } from "@/data/portfolioData";
 import { Button } from "@/components/ui/button";
@@ -104,10 +105,10 @@ const Projects = () => {
                     variant="outline"
                     className="mt-6 w-full border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground"
                   >
-                    <a href={`/projects/${project.slug}`}>
+                    <Link to={`/projects/${project.slug}`}>
                       View details
                       <ExternalLink className="ml-2 w-4 h-4" />
-                    </a>
+                    </Link>
                   </Button>
                 </div>
               </div>
