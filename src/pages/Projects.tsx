@@ -62,8 +62,8 @@ const Projects = () => {
                 className="group bg-card rounded-xl border border-border overflow-hidden hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 flex flex-col animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                {/* Image/Video Placeholder */}
-                <div className="aspect-video bg-muted flex items-center justify-center relative overflow-hidden">
+                {/* Image/Video Placeholder - Clickable */}
+                <Link to={`/projects/${project.slug}`} className="block aspect-video bg-muted flex items-center justify-center relative overflow-hidden">
                   {project.image ? (
                     <img
                       src={project.image}
@@ -76,20 +76,22 @@ const Projects = () => {
                       <span className="text-sm">Image/Video placeholder</span>
                     </div>
                   )}
-                </div>
+                </Link>
 
                 {/* Content */}
                 <div className="p-6 flex-1 flex flex-col">
-                  <h3 className="text-lg font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
-                    {project.title}
-                  </h3>
+                  <Link to={`/projects/${project.slug}`}>
+                    <h3 className="text-lg font-bold text-foreground mb-3 group-hover:text-primary transition-colors hover:text-primary cursor-pointer">
+                      {project.title}
+                    </h3>
+                  </Link>
 
                   <p className="text-sm text-muted-foreground mb-4 flex-1">
                     {project.description}
                   </p>
 
                   {/* Tags */}
-                  <div className="flex flex-wrap gap-2 mb-4">
+                  <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag, tagIndex) => (
                       <span
                         key={tagIndex}
@@ -99,17 +101,6 @@ const Projects = () => {
                       </span>
                     ))}
                   </div>
-
-                  <Button
-                    asChild
-                    variant="outline"
-                    className="mt-6 w-full border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground"
-                  >
-                    <Link to={`/projects/${project.slug}`}>
-                      View details
-                      <ExternalLink className="ml-2 w-4 h-4" />
-                    </Link>
-                  </Button>
                 </div>
               </div>
             ))}
