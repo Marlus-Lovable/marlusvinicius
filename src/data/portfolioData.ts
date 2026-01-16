@@ -76,7 +76,7 @@ export const projects = [
   },
   {
     id: 4,
-    title: "AREZZO'S WEBAR TOUR",
+    title: "Arezzo's Web-AR Tour",
     slug: "arezzo-webar-tour",
     description: "Responsive web-based virtual tour with augmented reality integration that allows users to explore a virtual environment and interact with Arezzo's products directly through the browser.",
     tags: ["Javascript", "AFrame", "Augmented Reality", "Web", "Advertising"],
