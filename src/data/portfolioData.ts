@@ -79,10 +79,11 @@ export const projectDetails: Record<string, {
   youtubeEmbed: string;
   extendedDescription: string;
   technicalDetails: { label: string; value: string }[];
-  roleIntro: string;
-  rolePoints: string[];
-  outcomes: string[];
-  additionalSections?: { title: string; points: string[] }[];
+  externalLinks?: { label: string; url: string }[];
+  roleIntro?: string;
+  rolePoints?: string[];
+  outcomes?: string[];
+  additionalSections?: { title: string; content?: string; points?: string[]; videoEmbed?: string }[];
   additionalVideoEmbed?: string;
 }> = {
   "industrial-training-platform": {
@@ -150,6 +151,31 @@ export const projectDetails: Record<string, {
       },
     ],
     additionalVideoEmbed: "https://www.youtube.com/embed/3XaCpB1EDmU",
+  },
+  "tartaruga-seas-essence": {
+    youtubeEmbed: "https://www.youtube.com/embed/TYhidZSFd2A",
+    extendedDescription: "Tartaruga: Sea's Essence is an educational, authorial academic game designed to raise awareness of how human-driven environmental issues—such as oil spills and improper waste disposal—impact marine life, using a sea turtle as its central symbol. In the game, players control a marine turtle navigating the ocean by following its natural orientation instincts, inspired by radio waves and Earth's magnetic fields, represented in gameplay as a moving white light that guides the player through the environment.\n\nBeyond navigation, the experience emphasizes survival mechanics: the player must manage hunger and oxygen levels by feeding on jellyfish and periodically surfacing to breathe. However, these actions come with risks that mirror real-world challenges faced by marine animals. Players can mistake plastic bags for jellyfish, suffer the effects of breathing in gasoline-contaminated waters, and must remain alert to natural predators such as sharks.\n\nDeveloped in Unity, the project includes custom gameplay systems and an optimized schooling (flocking) behavior implemented using the Unity Jobs System to improve performance through multithreading. Initially created to provide dynamic, aesthetic movement for fish, the flocking system was later expanded and studied as a foundation for more complex behaviors, integrating jellyfish and sharks and introducing new collective dynamics such as fleeing and predation. This evolution allowed the project to explore both technical performance and biologically inspired behavior systems while reinforcing its environmental message.",
+    technicalDetails: [
+      { label: "Tools", value: "Unity 2022, Git, Github" },
+      { label: "Language", value: "C#" },
+      { label: "Platform", value: "Windows" },
+      { label: "SDKs", value: "Jobs System (For Multithreaded Optimization), Burst Compiler" },
+      { label: "Feats", value: "Flocking Algorithm for NPCs, Aerial Movement" },
+      { label: "Type", value: "Personal / Academical / Educational" },
+      { label: "Time Range", value: "3 Months" },
+      { label: "Team Size", value: "5 (2 Programmers, 1 Artist, 1 Game Designer and 1 Sound Designer)" },
+    ],
+    externalLinks: [
+      { label: "Play the game on Itch.io", url: "https://mobius-band.itch.io/edm-tartaruga" },
+      { label: "Check the source code on GitHub", url: "https://github.com/Choosecake/turtle-project/tree/marlus-tests/flocking" },
+    ],
+    additionalSections: [
+      {
+        title: "Technical Explanation",
+        content: "The video below provides a deeper explanation of how the algorithm works from a theoretical perspective, how it was implemented in code, and concludes with a performance comparison between versions with and without Unity's Job System. The final section demonstrates how the Job System was used to support up to ten times more instances of the same object without impacting performance. The video is currently available in Brazilian Portuguese (PT-BR), and an English version will be released soon.",
+        videoEmbed: "https://www.youtube.com/embed/DgxWGlEOO_A",
+      },
+    ],
   },
 };
 
