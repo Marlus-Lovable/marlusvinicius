@@ -30,10 +30,12 @@ const ProjectDetail = () => {
           </div>
 
           {/* Extended Description */}
-          <div className="mb-10">
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              {details.extendedDescription}
-            </p>
+          <div className="mb-10 space-y-4">
+            {details.extendedDescription.split('\n\n').map((paragraph, index) => (
+              <p key={index} className="text-lg text-muted-foreground leading-relaxed">
+                {paragraph}
+              </p>
+            ))}
           </div>
 
           {/* Technical Details */}
