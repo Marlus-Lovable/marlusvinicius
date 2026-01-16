@@ -2,6 +2,7 @@
 import industrialTrainingImage from "@/assets/projects/industrial-training-platform.jpg";
 import guidedVrTourImage from "@/assets/projects/guided-vr-tour.jpg";
 import tartarugaImage from "@/assets/projects/tartaruga-seas-essence.gif";
+import arezzoWebarTourImage from "@/assets/projects/arezzo-webar-tour.gif";
 export const personalInfo = {
   name: "Marlus Vinicius",
   title: "Game Programmer",
@@ -71,6 +72,15 @@ export const projects = [
     description: "Educational game for raising awareness about how environmental issues such as oil spills and improper waste disposal affect marine animals, using the turtle as a symbol.",
     tags: ["Unity", "Academic", "Educational", "Windows", "Behavior", "Flocks", "Job System", "Multithreading"],
     image: tartarugaImage,
+    videoUrl: null,
+  },
+  {
+    id: 4,
+    title: "AREZZO'S WEBAR TOUR",
+    slug: "arezzo-webar-tour",
+    description: "Responsive web-based virtual tour with augmented reality integration that allows users to explore a virtual environment and interact with Arezzo's products directly through the browser.",
+    tags: ["Javascript", "AFrame", "Augmented Reality", "Web", "Advertising"],
+    image: arezzoWebarTourImage,
     videoUrl: null,
   },
 ];
