@@ -86,7 +86,8 @@ export const projects = [
 ];
 
 export const projectDetails: Record<string, {
-  youtubeEmbed: string;
+  youtubeEmbed?: string;
+  presentationImage?: string;
   extendedDescription: string;
   technicalDetails: { label: string; value: string }[];
   externalLinks?: { label: string; url: string }[];
@@ -185,6 +186,18 @@ export const projectDetails: Record<string, {
         content: "The video below provides a deeper explanation of how the algorithm works from a theoretical perspective, how it was implemented in code, and concludes with a performance comparison between versions with and without Unity's Job System. The final section demonstrates how the Job System was used to support up to ten times more instances of the same object without impacting performance. The video is currently available in Brazilian Portuguese (PT-BR), and an English version will be released soon.",
         videoEmbed: "https://www.youtube.com/embed/DgxWGlEOO_A",
       },
+    ],
+  },
+  "arezzo-webar-tour": {
+    presentationImage: arezzoWebarTourImage,
+    extendedDescription: "Arezzo's WebAR Tour is a responsive, browser-based virtual tour with augmented reality integration, created to showcase products from Arezzo, a leading Brazilian brand in women's shoes and accessories. The experience allows users to navigate a virtual environment directly on the web, offering an immersive and accessible way to explore products without requiring app installation.\n\nThe project combines virtual navigation with real-world AR visualization, enabling selected products to be viewed in the user's physical space through the device camera. Built with web-based AR technologies such as A-Frame WebAR, the experience focuses on cross-device compatibility, intuitive interaction, and lightweight performance, while also supporting user behavior tracking to better understand engagement patterns.",
+    technicalDetails: [
+      { label: "Tools", value: "A-Frame, WebAR" },
+      { label: "Language", value: "Javascript" },
+      { label: "Platform", value: "Web (Cross-device)" },
+      { label: "Feats", value: "Augmented Reality, Virtual Navigation, User Tracking" },
+      { label: "Type", value: "Advertising / Commercial" },
+      { label: "Client Company", value: "Arezzo" },
     ],
   },
 };
