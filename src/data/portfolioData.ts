@@ -69,7 +69,7 @@ export const projects = [
     title: "TARTARUGA: SEA'S ESSENCE",
     slug: "tartaruga-seas-essence",
     description: "Educational game for raising awareness about how environmental issues such as oil spills and improper waste disposal affect marine animals, using the turtle as a symbol.",
-    tags: ["Unity", "Academic", "Serious Games", "Windows", "Behavior", "Flocks", "Job System", "Multithreading"],
+    tags: ["Unity", "Academic", "Educational", "Windows", "Behavior", "Flocks", "Job System", "Multithreading"],
     image: tartarugaImage,
     videoUrl: null,
   },
