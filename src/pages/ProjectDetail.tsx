@@ -16,16 +16,26 @@ const ProjectDetail = () => {
     <Layout>
       <section className="py-12 bg-background">
         <div className="container mx-auto px-6 max-w-4xl">
-          {/* YouTube Video */}
+          {/* YouTube Video or Presentation Image */}
           <div className="mb-10">
-            <div className="aspect-video rounded-xl overflow-hidden shadow-2xl shadow-primary/10">
-              <iframe
-                className="w-full h-full"
-                src={details.youtubeEmbed}
-                title={project.title}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
+            <div className="rounded-xl overflow-hidden shadow-2xl shadow-primary/10">
+              {details.youtubeEmbed ? (
+                <div className="aspect-video">
+                  <iframe
+                    className="w-full h-full"
+                    src={details.youtubeEmbed}
+                    title={project.title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+              ) : details.presentationImage ? (
+                <img
+                  src={details.presentationImage}
+                  alt={project.title}
+                  className="w-full h-auto object-contain"
+                />
+              ) : null}
             </div>
           </div>
 
