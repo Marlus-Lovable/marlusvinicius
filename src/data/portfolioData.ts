@@ -3,6 +3,8 @@ import industrialTrainingImage from "@/assets/projects/industrial-training-platf
 import guidedVrTourImage from "@/assets/projects/guided-vr-tour.jpg";
 import tartarugaImage from "@/assets/projects/tartaruga-seas-essence.gif";
 import arezzoWebarTourImage from "@/assets/projects/arezzo-webar-tour.gif";
+import arezzoRef0 from "@/assets/projects/arezzo-ref-0.jpg";
+import arezzoRef1 from "@/assets/projects/arezzo-ref-1.jpg";
 export const personalInfo = {
   name: "Marlus Vinicius",
   title: "Game Programmer",
@@ -79,7 +81,7 @@ export const projects = [
     title: "Arezzo's Web-AR Tour",
     slug: "arezzo-webar-tour",
     description: "Responsive web-based virtual tour with augmented reality integration that allows users to explore a virtual environment and interact with Arezzo's products directly through the browser.",
-    tags: ["Javascript", "AFrame", "Augmented Reality", "Web", "Advertising"],
+    tags: ["Javascript", "AFrame", "Augmented Reality", "Web", "Advertising", "Responsive"],
     image: arezzoWebarTourImage,
     videoUrl: null,
   },
@@ -96,6 +98,7 @@ export const projectDetails: Record<string, {
   outcomes?: string[];
   additionalSections?: { title: string; content?: string; points?: string[]; videoEmbed?: string }[];
   additionalVideoEmbed?: string;
+  referenceImages?: string[];
 }> = {
   "industrial-training-platform": {
     youtubeEmbed: "https://www.youtube.com/embed/Zzclm8R1dck",
@@ -198,7 +201,26 @@ export const projectDetails: Record<string, {
       { label: "Feats", value: "Augmented Reality, Virtual Navigation, User Tracking" },
       { label: "Type", value: "Advertising / Commercial" },
       { label: "Client Company", value: "Arezzo" },
+      { label: "Company", value: "Compass.UOL" },
+      { label: "Team Size", value: "5 (2 Programmers, 1 Project Manager, 1 3D Artist, 1 UI Artist)" },
     ],
+    externalLinks: [
+      { label: "Test it here (Desktop or Mobile devices for products in AR)", url: "https://galeria50anos.arezzo.com.br/" },
+    ],
+    rolePoints: [
+      "Worked on the implementation of the virtual environment structure, designing and positioning the enclosing space to create a convincing sense of immersion.",
+      "Assisted in the integration of augmented reality features that allow products to be visualized in the user's real environment through the device camera.",
+      "Implemented user interaction and usage tracking using Google Tag Manager (GTM) to support data-driven insights on visitor behavior.",
+      "Faced the challenge of working with JavaScript and Web-based augmented reality in a professional context for the first time.",
+      "Received technical guidance and support from the division's tech lead, enabling faster onboarding and effective problem-solving throughout the project.",
+    ],
+    outcomes: [
+      "Completed the project with a stronger understanding of system design and architectural thinking in web-based experiences.",
+      "Developed the ability to adapt logical problem-solving across different programming languages and technical contexts.",
+      "Contributed to a project that served as a promotional and strategic asset for both the client and the development company, strengthening the partnership between them.",
+      "Helped enable new business opportunities and follow-up demands across other areas of the company through the project's visibility and impact.",
+    ],
+    referenceImages: [arezzoRef0, arezzoRef1],
   },
 };
 
