@@ -5,6 +5,8 @@ import tartarugaImage from "@/assets/projects/tartaruga-seas-essence.gif";
 import arezzoWebarTourImage from "@/assets/projects/arezzo-webar-tour.gif";
 import arezzoRef0 from "@/assets/projects/arezzo-ref-0.jpg";
 import arezzoRef1 from "@/assets/projects/arezzo-ref-1.jpg";
+import digital3dAssistantImage from "@/assets/projects/digital-3d-assistant.png";
+
 export const personalInfo = {
   name: "Marlus Vinicius",
   title: "Game Programmer",
@@ -83,6 +85,15 @@ export const projects = [
     description: "Responsive web-based virtual tour with augmented reality integration that allows users to explore a virtual environment and interact with Arezzo's products directly through the browser.",
     tags: ["Javascript", "AFrame", "Augmented Reality", "Web", "Advertising", "Responsive"],
     image: arezzoWebarTourImage,
+    videoUrl: null,
+  },
+  {
+    id: 5,
+    title: "Digital 3D Assistant",
+    slug: "digital-3d-assistant",
+    description: "A R&D project using a 3D avatar as a virtual assistant. It delivers an engaging, conversational digital experience through natural, voice-based interaction powered by real-time AI services.",
+    tags: ["Unity", "Digital Assistant", "REST API", "WebSockets", "AI", "Advertising", "LipSync", "Speech to Text", "Text to Speech"],
+    image: digital3dAssistantImage,
     videoUrl: null,
   },
 ];
@@ -221,6 +232,32 @@ export const projectDetails: Record<string, {
       "Helped enable new business opportunities and follow-up demands across other areas of the company through the project's visibility and impact.",
     ],
     referenceImages: [arezzoRef0, arezzoRef1],
+  },
+  "digital-3d-assistant": {
+    youtubeEmbed: "https://www.youtube.com/embed/8hegGZn48UQ",
+    extendedDescription: "Runtime Digital Assistant is a research and development project built in Unity that explores the use of a 3D avatar as a real-time virtual assistant for a banking environment. The experience focuses on natural, voice-based interaction, using a digital character to represent the assistant and create a more engaging and humanized user experience.\n\nThe system enables fluid communication by connecting speech recognition, AI-driven response generation, and speech synthesis, allowing the assistant to listen, process, and respond in real time. The avatar's speech is visually synchronized with facial animations to reinforce clarity and realism, while the overall architecture emphasizes modularity and scalability to support ongoing experimentation, iteration, and future expansion.",
+    technicalDetails: [
+      { label: "Tools", value: "Unity, Jira (Project Management and Version Control)" },
+      { label: "SDKs", value: "Salsa LipSync Suite (For Lipsync)" },
+      { label: "APIs", value: "IBM Watsonx Agent (Interpretation and response to user text), Azure Text-to-Speech, Azure Speech-to-Text" },
+      { label: "Feats", value: "Scriptable Object Driven Architecture" },
+      { label: "Type", value: "Advertising / Commercial" },
+      { label: "Company", value: "Compass.UOL" },
+      { label: "Time Range", value: "5 Months" },
+      { label: "Team Size", value: "2 (1 Supervisor and 1 Programmer(me))" },
+    ],
+    externalLinks: [
+      { label: "Read a bit more about IBM Watson Agent here", url: "https://www.ibm.com/think/topics/ai-agents-in-customer-service#257779833" },
+      { label: "Text to Speech and Speech to Text", url: "https://learn.microsoft.com/en-us/azure/ai-services/speech-service/" },
+      { label: "Salsa LipSync Suite", url: "https://assetstore.unity.com/packages/tools/animation/salsa-lipsync-suite-148442?srsltid=AfmBOoqygeSw7Rn5zqAwP2bcLCCc4JZ_ievKz28c1ikdNdtCy37jA5VS" },
+      { label: "Scriptable Object Architecture", url: "https://github.com/DanielEverland/ScriptableObject-Architecture" },
+    ],
+    rolePoints: [
+      "Worked almost independently on the project, taking ownership of both technical implementation and system integration.",
+      "Faced the challenge of working with REST APIs, WebSockets, and asynchronous programming for the first time, developing a solid, engine- and language-agnostic understanding of these technologies.",
+      "Designed and contributed to the project's code architecture, focusing on modularity, decoupling, and long-term maintainability.",
+      "Integrated multiple real-time services into a cohesive interaction flow, balancing responsiveness, stability, and scalability within the application.",
+    ],
   },
 };
 
