@@ -38,20 +38,22 @@ const Projects = () => {
       <section className="py-12 bg-background">
         <div className="container mx-auto px-6">
           {/* Tag Filter */}
-          <div className="flex flex-wrap gap-2 mb-8 justify-center">
-            {allTags.map((tag) => (
-              <button
-                key={tag}
-                onClick={() => toggleTag(tag)}
-                className={`px-4 py-2 text-sm font-medium rounded-full border transition-all duration-200 ${
-                  selectedTags.includes(tag)
-                    ? "bg-primary text-primary-foreground border-primary"
-                    : "border-primary/50 text-primary bg-primary/5 hover:bg-primary/10"
-                }`}
-              >
-                {tag}
-              </button>
-            ))}
+          <div className="max-h-24 overflow-y-auto mb-8 scrollbar-thin">
+            <div className="flex flex-wrap gap-1.5 justify-center">
+              {allTags.map((tag) => (
+                <button
+                  key={tag}
+                  onClick={() => toggleTag(tag)}
+                  className={`px-3 py-1.5 text-xs font-medium rounded-full border transition-all duration-200 ${
+                    selectedTags.includes(tag)
+                      ? "bg-primary text-primary-foreground border-primary"
+                      : "border-primary/50 text-primary bg-primary/5 hover:bg-primary/10"
+                  }`}
+                >
+                  {tag}
+                </button>
+              ))}
+            </div>
           </div>
 
           {/* Projects Grid */}
