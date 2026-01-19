@@ -33,7 +33,7 @@ const ProjectDetail = () => {
                 <img
                   src={details.presentationImage}
                   alt={project.title}
-                  className="w-1/2 h-auto object-contain mx-auto"
+                  className="w-1/4 h-auto object-contain mx-auto"
                 />
               ) : null}
             </div>

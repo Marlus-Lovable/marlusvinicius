@@ -195,7 +195,7 @@ export const projectDetails: Record<string, {
     presentationImage: arezzoWebarTourImage,
     extendedDescription: "Arezzo's WebAR Tour is a responsive, browser-based virtual tour with augmented reality integration, created to showcase products from Arezzo, a leading Brazilian brand in women's shoes and accessories. The experience allows users to navigate a virtual environment directly on the web, offering an immersive and accessible way to explore products without requiring app installation.\n\nThe project combines virtual navigation with real-world AR visualization, enabling selected products to be viewed in the user's physical space through the device camera. Built with web-based AR technologies such as A-Frame WebAR, the experience focuses on cross-device compatibility, intuitive interaction, and lightweight performance, while also supporting user behavior tracking to better understand engagement patterns.",
     technicalDetails: [
-      { label: "Tools", value: "A-Frame, WebAR" },
+      { label: "Tools", value: "A-Frame, WebAR, GTM" },
       { label: "Language", value: "Javascript" },
       { label: "Platform", value: "Web (Cross-device)" },
       { label: "Feats", value: "Augmented Reality, Virtual Navigation, User Tracking" },
