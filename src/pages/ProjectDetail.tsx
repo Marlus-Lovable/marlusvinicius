@@ -33,7 +33,7 @@ const ProjectDetail = () => {
                 <img
                   src={details.presentationImage}
                   alt={project.title}
-                  className="w-full h-auto object-contain"
+                  className="w-1/2 h-auto object-contain mx-auto"
                 />
               ) : null}
             </div>
@@ -79,12 +79,14 @@ const ProjectDetail = () => {
           )}
 
           {/* Contributions & Challenges */}
-          {details.roleIntro && details.rolePoints && (
+          {details.rolePoints && details.rolePoints.length > 0 && (
             <div className="mb-10">
               <h2 className="text-2xl font-bold text-foreground mb-4">Contributions & Challenges</h2>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                {details.roleIntro}
-              </p>
+              {details.roleIntro && (
+                <p className="text-muted-foreground mb-6 leading-relaxed">
+                  {details.roleIntro}
+                </p>
+              )}
               <ul className="space-y-4">
                 {details.rolePoints.map((point, index) => (
                   <li key={index} className="flex gap-3">
@@ -155,6 +157,23 @@ const ProjectDetail = () => {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 />
+              </div>
+            </div>
+          )}
+
+          {/* Reference Images */}
+          {details.referenceImages && details.referenceImages.length > 0 && (
+            <div className="mb-10">
+              <h2 className="text-2xl font-bold text-foreground mb-4">Reference Images</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {details.referenceImages.map((image, index) => (
+                  <img
+                    key={index}
+                    src={image}
+                    alt={`${project.title} - Reference ${index + 1}`}
+                    className="w-full h-auto rounded-xl shadow-lg object-cover"
+                  />
+                ))}
               </div>
             </div>
           )}
