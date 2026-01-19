@@ -2,6 +2,11 @@
 import industrialTrainingImage from "@/assets/projects/industrial-training-platform.jpg";
 import guidedVrTourImage from "@/assets/projects/guided-vr-tour.jpg";
 import tartarugaImage from "@/assets/projects/tartaruga-seas-essence.gif";
+import arezzoWebarTourImage from "@/assets/projects/arezzo-webar-tour.gif";
+import arezzoRef0 from "@/assets/projects/arezzo-ref-0.jpg";
+import arezzoRef1 from "@/assets/projects/arezzo-ref-1.jpg";
+import digital3dAssistantImage from "@/assets/projects/digital-3d-assistant.png";
+
 export const personalInfo = {
   name: "Marlus Vinicius",
   title: "Game Programmer",
@@ -69,14 +74,33 @@ export const projects = [
     title: "TARTARUGA: SEA'S ESSENCE",
     slug: "tartaruga-seas-essence",
     description: "Educational game for raising awareness about how environmental issues such as oil spills and improper waste disposal affect marine animals, using the turtle as a symbol.",
-    tags: ["Unity", "Academic", "Serious Games", "Windows", "Behavior", "Flocks", "Job System", "Multithreading"],
+    tags: ["Unity", "Academic", "Educational", "Windows", "Behavior", "Flocks", "Job System", "Multithreading"],
     image: tartarugaImage,
+    videoUrl: null,
+  },
+  {
+    id: 4,
+    title: "Arezzo's Web-AR Tour",
+    slug: "arezzo-webar-tour",
+    description: "Responsive web-based virtual tour with augmented reality integration that allows users to explore a virtual environment and interact with Arezzo's products directly through the browser.",
+    tags: ["Javascript", "AFrame", "Augmented Reality", "Web", "Advertising", "Responsive"],
+    image: arezzoWebarTourImage,
+    videoUrl: null,
+  },
+  {
+    id: 5,
+    title: "Digital 3D Assistant",
+    slug: "digital-3d-assistant",
+    description: "A R&D project using a 3D avatar as a virtual assistant. It delivers an engaging, conversational digital experience through natural, voice-based interaction powered by real-time AI services.",
+    tags: ["Unity", "Digital Assistant", "REST API", "WebSockets", "AI", "Advertising", "LipSync", "Speech to Text", "Text to Speech"],
+    image: digital3dAssistantImage,
     videoUrl: null,
   },
 ];
 
 export const projectDetails: Record<string, {
-  youtubeEmbed: string;
+  youtubeEmbed?: string;
+  presentationImage?: string;
   extendedDescription: string;
   technicalDetails: { label: string; value: string }[];
   externalLinks?: { label: string; url: string }[];
@@ -85,6 +109,7 @@ export const projectDetails: Record<string, {
   outcomes?: string[];
   additionalSections?: { title: string; content?: string; points?: string[]; videoEmbed?: string }[];
   additionalVideoEmbed?: string;
+  referenceImages?: string[];
 }> = {
   "industrial-training-platform": {
     youtubeEmbed: "https://www.youtube.com/embed/Zzclm8R1dck",
@@ -175,6 +200,63 @@ export const projectDetails: Record<string, {
         content: "The video below provides a deeper explanation of how the algorithm works from a theoretical perspective, how it was implemented in code, and concludes with a performance comparison between versions with and without Unity's Job System. The final section demonstrates how the Job System was used to support up to ten times more instances of the same object without impacting performance. The video is currently available in Brazilian Portuguese (PT-BR), and an English version will be released soon.",
         videoEmbed: "https://www.youtube.com/embed/DgxWGlEOO_A",
       },
+    ],
+  },
+  "arezzo-webar-tour": {
+    presentationImage: arezzoWebarTourImage,
+    extendedDescription: "Arezzo's WebAR Tour is a responsive, browser-based virtual tour with augmented reality integration, created to showcase products from Arezzo, a leading Brazilian brand in women's shoes and accessories. The experience allows users to navigate a virtual environment directly on the web, offering an immersive and accessible way to explore products without requiring app installation.\n\nThe project combines virtual navigation with real-world AR visualization, enabling selected products to be viewed in the user's physical space through the device camera. Built with web-based AR technologies such as A-Frame WebAR, the experience focuses on cross-device compatibility, intuitive interaction, and lightweight performance, while also supporting user behavior tracking to better understand engagement patterns.",
+    technicalDetails: [
+      { label: "Tools", value: "A-Frame, WebAR, GTM" },
+      { label: "Language", value: "Javascript" },
+      { label: "Platform", value: "Web (Cross-device)" },
+      { label: "Feats", value: "Augmented Reality, Virtual Navigation, User Tracking" },
+      { label: "Type", value: "Advertising / Commercial" },
+      { label: "Client Company", value: "Arezzo" },
+      { label: "Company", value: "Compass.UOL" },
+      { label: "Team Size", value: "5 (2 Programmers, 1 Project Manager, 1 3D Artist, 1 UI Artist)" },
+    ],
+    externalLinks: [
+      { label: "Test it here (Desktop or Mobile devices for products in AR)", url: "https://galeria50anos.arezzo.com.br/" },
+    ],
+    rolePoints: [
+      "Worked on the implementation of the virtual environment structure, designing and positioning the enclosing space to create a convincing sense of immersion.",
+      "Assisted in the integration of augmented reality features that allow products to be visualized in the user's real environment through the device camera.",
+      "Implemented user interaction and usage tracking using Google Tag Manager (GTM) to support data-driven insights on visitor behavior.",
+      "Faced the challenge of working with JavaScript and Web-based augmented reality in a professional context for the first time.",
+      "Received technical guidance and support from the division's tech lead, enabling faster onboarding and effective problem-solving throughout the project.",
+    ],
+    outcomes: [
+      "Completed the project with a stronger understanding of system design and architectural thinking in web-based experiences.",
+      "Developed the ability to adapt logical problem-solving across different programming languages and technical contexts.",
+      "Contributed to a project that served as a promotional and strategic asset for both the client and the development company, strengthening the partnership between them.",
+      "Helped enable new business opportunities and follow-up demands across other areas of the company through the project's visibility and impact.",
+    ],
+    referenceImages: [arezzoRef0, arezzoRef1],
+  },
+  "digital-3d-assistant": {
+    youtubeEmbed: "https://www.youtube.com/embed/8hegGZn48UQ",
+    extendedDescription: "Runtime Digital Assistant is a research and development project built in Unity that explores the use of a 3D avatar as a real-time virtual assistant for a banking environment. The experience focuses on natural, voice-based interaction, using a digital character to represent the assistant and create a more engaging and humanized user experience.\n\nThe system enables fluid communication by connecting speech recognition, AI-driven response generation, and speech synthesis, allowing the assistant to listen, process, and respond in real time. The avatar's speech is visually synchronized with facial animations to reinforce clarity and realism, while the overall architecture emphasizes modularity and scalability to support ongoing experimentation, iteration, and future expansion.",
+    technicalDetails: [
+      { label: "Tools", value: "Unity, Jira (Project Management and Version Control)" },
+      { label: "SDKs", value: "Salsa LipSync Suite (For Lipsync)" },
+      { label: "APIs", value: "IBM Watsonx Agent (Interpretation and response to user text), Azure Text-to-Speech, Azure Speech-to-Text" },
+      { label: "Feats", value: "Scriptable Object Driven Architecture" },
+      { label: "Type", value: "Advertising / Commercial" },
+      { label: "Company", value: "Compass.UOL" },
+      { label: "Time Range", value: "5 Months" },
+      { label: "Team Size", value: "2 (1 Supervisor and 1 Programmer(me))" },
+    ],
+    externalLinks: [
+      { label: "Read a bit more about IBM Watson Agent here", url: "https://www.ibm.com/think/topics/ai-agents-in-customer-service#257779833" },
+      { label: "Text to Speech and Speech to Text", url: "https://learn.microsoft.com/en-us/azure/ai-services/speech-service/" },
+      { label: "Salsa LipSync Suite", url: "https://assetstore.unity.com/packages/tools/animation/salsa-lipsync-suite-148442?srsltid=AfmBOoqygeSw7Rn5zqAwP2bcLCCc4JZ_ievKz28c1ikdNdtCy37jA5VS" },
+      { label: "Scriptable Object Architecture", url: "https://github.com/DanielEverland/ScriptableObject-Architecture" },
+    ],
+    rolePoints: [
+      "Worked almost independently on the project, taking ownership of both technical implementation and system integration.",
+      "Faced the challenge of working with REST APIs, WebSockets, and asynchronous programming for the first time, developing a solid, engine- and language-agnostic understanding of these technologies.",
+      "Designed and contributed to the project's code architecture, focusing on modularity, decoupling, and long-term maintainability.",
+      "Integrated multiple real-time services into a cohesive interaction flow, balancing responsiveness, stability, and scalability within the application.",
     ],
   },
 };

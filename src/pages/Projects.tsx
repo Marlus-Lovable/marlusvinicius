@@ -38,20 +38,22 @@ const Projects = () => {
       <section className="py-12 bg-background">
         <div className="container mx-auto px-6">
           {/* Tag Filter */}
-          <div className="flex flex-wrap gap-2 mb-8 justify-center">
-            {allTags.map((tag) => (
-              <button
-                key={tag}
-                onClick={() => toggleTag(tag)}
-                className={`px-4 py-2 text-sm font-medium rounded-full border transition-all duration-200 ${
-                  selectedTags.includes(tag)
-                    ? "bg-primary text-primary-foreground border-primary"
-                    : "border-primary/50 text-primary bg-primary/5 hover:bg-primary/10"
-                }`}
-              >
-                {tag}
-              </button>
-            ))}
+          <div className="max-h-24 overflow-y-auto mb-8 scrollbar-thin">
+            <div className="flex flex-wrap gap-1.5 justify-center">
+              {allTags.map((tag) => (
+                <button
+                  key={tag}
+                  onClick={() => toggleTag(tag)}
+                  className={`px-3 py-1.5 text-xs font-medium rounded-full border transition-all duration-200 ${
+                    selectedTags.includes(tag)
+                      ? "bg-primary text-primary-foreground border-primary"
+                      : "border-primary/50 text-primary bg-primary/5 hover:bg-primary/10"
+                  }`}
+                >
+                  {tag}
+                </button>
+              ))}
+            </div>
           </div>
 
           {/* Projects Grid */}
@@ -62,8 +64,8 @@ const Projects = () => {
                 className="group bg-card rounded-xl border border-border overflow-hidden hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 flex flex-col animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                {/* Image/Video Placeholder */}
-                <div className="aspect-video bg-muted flex items-center justify-center relative overflow-hidden">
+                {/* Image/Video Placeholder - Clickable */}
+                <Link to={`/projects/${project.slug}`} className="block aspect-video bg-muted flex items-center justify-center relative overflow-hidden">
                   {project.image ? (
                     <img
                       src={project.image}
@@ -76,20 +78,22 @@ const Projects = () => {
                       <span className="text-sm">Image/Video placeholder</span>
                     </div>
                   )}
-                </div>
+                </Link>
 
                 {/* Content */}
                 <div className="p-6 flex-1 flex flex-col">
-                  <h3 className="text-lg font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
-                    {project.title}
-                  </h3>
+                  <Link to={`/projects/${project.slug}`}>
+                    <h3 className="text-lg font-bold text-foreground mb-3 group-hover:text-primary transition-colors hover:text-primary cursor-pointer">
+                      {project.title}
+                    </h3>
+                  </Link>
 
                   <p className="text-sm text-muted-foreground mb-4 flex-1">
                     {project.description}
                   </p>
 
                   {/* Tags */}
-                  <div className="flex flex-wrap gap-2 mb-4">
+                  <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag, tagIndex) => (
                       <span
                         key={tagIndex}
@@ -99,17 +103,6 @@ const Projects = () => {
                       </span>
                     ))}
                   </div>
-
-                  <Button
-                    asChild
-                    variant="outline"
-                    className="mt-6 w-full border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground"
-                  >
-                    <Link to={`/projects/${project.slug}`}>
-                      View details
-                      <ExternalLink className="ml-2 w-4 h-4" />
-                    </Link>
-                  </Button>
                 </div>
               </div>
             ))}
