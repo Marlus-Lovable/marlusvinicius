@@ -8,9 +8,7 @@
       // With HashRouter, we can always redirect 404s to /#/...
       (function () {
         var l = window.location;
-        var repoName = "marlusvinicius";
-        var isProjectPage = l.pathname.indexOf("/" + repoName + "/") === 0;
-        var basePath = isProjectPage ? "/" + repoName + "/" : "/";
+        var basePath = "/";
 
         // Remove leading base path so /marlusvinicius/projects/x -> projects/x
         var pathWithoutBase = l.pathname.slice(basePath.length);
