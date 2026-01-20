@@ -7,7 +7,8 @@ import { HashRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Projects from "./pages/Projects";
 import ProjectDetail from "./pages/ProjectDetail";
-import OtherLinks from "./pages/OtherLinks";
+import LinksAndContacts from "./pages/OtherLinks";
+import AboutMe from "./pages/AboutMe";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,7 +23,10 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/projects/:slug" element={<ProjectDetail />} />
-          <Route path="/other" element={<OtherLinks />} />
+          <Route path="/links" element={<LinksAndContacts />} />
+          <Route path="/about" element={<AboutMe />} />
+          {/* Legacy route redirect */}
+          <Route path="/other" element={<LinksAndContacts />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
