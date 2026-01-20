@@ -20,7 +20,7 @@ const Header = () => {
         </Link>
 
         {/* Navigation Buttons */}
-        <nav className="flex items-center gap-3">
+        <nav className="flex items-center gap-2 md:gap-3">
           <Button 
             asChild 
             variant={currentPath === "/projects" ? "default" : "outline"} 
@@ -30,10 +30,17 @@ const Header = () => {
           </Button>
           <Button 
             asChild 
-            variant={currentPath === "/other" ? "default" : "outline"} 
+            variant={currentPath === "/about" ? "default" : "outline"} 
             size="sm"
           >
-            <Link to="/other">Other links</Link>
+            <Link to="/about">About me</Link>
+          </Button>
+          <Button 
+            asChild 
+            variant={currentPath === "/links" ? "default" : "outline"} 
+            size="sm"
+          >
+            <Link to="/links">Links & Contacts</Link>
           </Button>
         </nav>
       </div>
