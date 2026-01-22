@@ -6,9 +6,11 @@ import arezzoWebarTourImage from "@/assets/projects/arezzo-webar-tour.gif";
 import arezzoRef0 from "@/assets/projects/arezzo-ref-0.jpg";
 import arezzoRef1 from "@/assets/projects/arezzo-ref-1.jpg";
 import digital3dAssistantImage from "@/assets/projects/digital-3d-assistant.png";
-import carnauolMetaverseImage from "@/assets/projects/carnauol-metaverse.gif";
-import carnauolMetaversePresentationImage from "@/assets/projects/carnauol-metaverse-presentation.webp";
-import codeConduitImage from "@/assets/projects/code-conduit.png";
+
+// Placeholder images for new projects (images need to be uploaded)
+const carnauolMetaverseImage = "/placeholder.svg";
+const carnauolMetaversePresentationImage = "/placeholder.svg";
+const codeConduitImage = "/placeholder.svg";
 
 export const personalInfo = {
   name: "Marlus Vinicius",
