@@ -16,6 +16,18 @@ const ProjectDetail = () => {
     <Layout>
       <section className="py-12 bg-background">
         <div className="container mx-auto px-6 max-w-4xl">
+          {/* Project Title and Date */}
+          <div className="mb-8">
+            <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-2">
+              {project.title}
+            </h1>
+            {details.projectDate && (
+              <p className="text-muted-foreground text-lg">
+                {details.projectDate}
+              </p>
+            )}
+          </div>
+
           {/* YouTube Video or Presentation Image */}
           <div className="mb-10">
             <div className="rounded-xl overflow-hidden shadow-2xl shadow-primary/10">
