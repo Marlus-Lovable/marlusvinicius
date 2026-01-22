@@ -9,7 +9,6 @@ import digital3dAssistantImage from "@/assets/projects/digital-3d-assistant.png"
 
 // Placeholder images for new projects (images need to be uploaded)
 const carnauolMetaverseImage = "/placeholder.svg";
-const carnauolMetaversePresentationImage = "/placeholder.svg";
 const codeConduitImage = "/placeholder.svg";
 
 export const personalInfo = {
@@ -290,7 +289,7 @@ export const projectDetails: Record<string, {
   },
   "carnauol-metaverse": {
     projectDate: "2023",
-    presentationImage: carnauolMetaversePresentationImage,
+    presentationImage: carnauolMetaverseImage,
     extendedDescription: "The experience features multiple brand-sponsored universes, each offering interactive mini-games based on familiar real-world activities adapted to the virtual environment. Built on a proprietary platform developed in a short time frame, the project served as a pilot to test new formats for social interaction, gamified brand engagement, and immersive storytelling, with the goal of expanding similar experiences to other cultural celebrations in the future.\n\nFrom a technical perspective, this project marked the first time the team adopted a ScriptableObject-oriented architecture, which influenced how game logic, configurations, and behaviors were structured and reused across mini-games. This approach helped improve modularity, data-driven design, and iteration speed during development, especially in a fast-paced project with multiple interactive experiences running within the same platform.",
     technicalDetails: [
       { label: "Tools", value: "Unity, Git, Jira (Project Management and Repository)" },
