@@ -6,6 +6,9 @@ import arezzoWebarTourImage from "@/assets/projects/arezzo-webar-tour.gif";
 import arezzoRef0 from "@/assets/projects/arezzo-ref-0.jpg";
 import arezzoRef1 from "@/assets/projects/arezzo-ref-1.jpg";
 import digital3dAssistantImage from "@/assets/projects/digital-3d-assistant.png";
+import carnauolMetaverseImage from "@/assets/projects/carnauol-metaverse.gif";
+import carnauolMetaversePresentationImage from "@/assets/projects/carnauol-metaverse-presentation.webp";
+import codeConduitImage from "@/assets/projects/code-conduit.png";
 
 export const personalInfo = {
   name: "Marlus Vinicius",
@@ -96,9 +99,28 @@ export const projects = [
     image: digital3dAssistantImage,
     videoUrl: null,
   },
+  {
+    id: 6,
+    title: "CarnaUOL Metaverse",
+    slug: "carnauol-metaverse",
+    description: "A virtual Carnival experience created by Compass UOL that allows users to celebrate from home in an immersive online environment. Players explore a festive virtual village, customize avatars, interact via text and voice, and take part in brand-sponsored mini-games inspired by real Carnival activities, serving as a pilot project for new forms of social and branded digital experiences.",
+    tags: ["Unity", "Advertising", "Metaverse", "Game", "Web", "Responsive"],
+    image: carnauolMetaverseImage,
+    videoUrl: null,
+  },
+  {
+    id: 7,
+    title: "Code: Conduit",
+    slug: "code-conduit",
+    description: "A sci-fi action game and final graduation project that blends fast-paced hack-and-slash combat with puzzle gameplay. Players control Luden, a robot navigating a dystopian world while shifting between a physical reality and a stylized cyber space that symbolizes hacking and self-discovery.",
+    tags: ["Unity", "Game", "Academic", "Puzzle", "Hack 'n Slash", "Sci Fi"],
+    image: codeConduitImage,
+    videoUrl: null,
+  },
 ];
 
 export const projectDetails: Record<string, {
+  projectDate?: string;
   youtubeEmbed?: string;
   presentationImage?: string;
   extendedDescription: string;
@@ -112,6 +134,7 @@ export const projectDetails: Record<string, {
   referenceImages?: string[];
 }> = {
   "industrial-training-platform": {
+    projectDate: "2025",
     youtubeEmbed: "https://www.youtube.com/embed/Zzclm8R1dck",
     extendedDescription: "Virtual system developed at AeonVR that simulates industrial assembly processes, enabling companies to create customized, immersive training experiences using their own 3D models.",
     technicalDetails: [
@@ -137,6 +160,7 @@ export const projectDetails: Record<string, {
     ],
   },
   "guided-vr-tour": {
+    projectDate: "2025",
     youtubeEmbed: "https://www.youtube.com/embed/k4SoFt65-7s",
     extendedDescription: "Fibracem's Guided VR Tour is an immersive virtual reality experience developed to present Fibracem's optical network infrastructure solutions in an engaging and interactive way. The project showcases the company's products and manufacturing processes within a virtual environment designed to emphasize quality, precision, and innovation.\n\nThe experience was expanded from a single-user application into a multiplayer, cross-platform solution, enabling remote, guided tours through an asymmetric setup connecting VR headsets and tablets. By integrating real-time interaction, network synchronization, and cross-device communication, the project allows company representatives to guide clients through the virtual experience remotely. Built using technologies such as MetaXR, OpenXR, GDXR VR Template, and EOS Integration Kit, the project supports scalable, immersive presentations aligned with AeonVR's proprietary multiplayer platform.",
     technicalDetails: [
@@ -178,6 +202,7 @@ export const projectDetails: Record<string, {
     additionalVideoEmbed: "https://www.youtube.com/embed/3XaCpB1EDmU",
   },
   "tartaruga-seas-essence": {
+    projectDate: "2022",
     youtubeEmbed: "https://www.youtube.com/embed/TYhidZSFd2A",
     extendedDescription: "Tartaruga: Sea's Essence is an educational, authorial academic game designed to raise awareness of how human-driven environmental issues—such as oil spills and improper waste disposal—impact marine life, using a sea turtle as its central symbol. In the game, players control a marine turtle navigating the ocean by following its natural orientation instincts, inspired by radio waves and Earth's magnetic fields, represented in gameplay as a moving white light that guides the player through the environment.\n\nBeyond navigation, the experience emphasizes survival mechanics: the player must manage hunger and oxygen levels by feeding on jellyfish and periodically surfacing to breathe. However, these actions come with risks that mirror real-world challenges faced by marine animals. Players can mistake plastic bags for jellyfish, suffer the effects of breathing in gasoline-contaminated waters, and must remain alert to natural predators such as sharks.\n\nDeveloped in Unity, the project includes custom gameplay systems and an optimized schooling (flocking) behavior implemented using the Unity Jobs System to improve performance through multithreading. Initially created to provide dynamic, aesthetic movement for fish, the flocking system was later expanded and studied as a foundation for more complex behaviors, integrating jellyfish and sharks and introducing new collective dynamics such as fleeing and predation. This evolution allowed the project to explore both technical performance and biologically inspired behavior systems while reinforcing its environmental message.",
     technicalDetails: [
@@ -203,6 +228,7 @@ export const projectDetails: Record<string, {
     ],
   },
   "arezzo-webar-tour": {
+    projectDate: "2023",
     presentationImage: arezzoWebarTourImage,
     extendedDescription: "Arezzo's WebAR Tour is a responsive, browser-based virtual tour with augmented reality integration, created to showcase products from Arezzo, a leading Brazilian brand in women's shoes and accessories. The experience allows users to navigate a virtual environment directly on the web, offering an immersive and accessible way to explore products without requiring app installation.\n\nThe project combines virtual navigation with real-world AR visualization, enabling selected products to be viewed in the user's physical space through the device camera. Built with web-based AR technologies such as A-Frame WebAR, the experience focuses on cross-device compatibility, intuitive interaction, and lightweight performance, while also supporting user behavior tracking to better understand engagement patterns.",
     technicalDetails: [
@@ -234,6 +260,7 @@ export const projectDetails: Record<string, {
     referenceImages: [arezzoRef0, arezzoRef1],
   },
   "digital-3d-assistant": {
+    projectDate: "2024",
     youtubeEmbed: "https://www.youtube.com/embed/8hegGZn48UQ",
     extendedDescription: "Runtime Digital Assistant is a research and development project built in Unity that explores the use of a 3D avatar as a real-time virtual assistant for a banking environment. The experience focuses on natural, voice-based interaction, using a digital character to represent the assistant and create a more engaging and humanized user experience.\n\nThe system enables fluid communication by connecting speech recognition, AI-driven response generation, and speech synthesis, allowing the assistant to listen, process, and respond in real time. The avatar's speech is visually synchronized with facial animations to reinforce clarity and realism, while the overall architecture emphasizes modularity and scalability to support ongoing experimentation, iteration, and future expansion.",
     technicalDetails: [
@@ -257,6 +284,23 @@ export const projectDetails: Record<string, {
       "Faced the challenge of working with REST APIs, WebSockets, and asynchronous programming for the first time, developing a solid, engine- and language-agnostic understanding of these technologies.",
       "Designed and contributed to the project's code architecture, focusing on modularity, decoupling, and long-term maintainability.",
       "Integrated multiple real-time services into a cohesive interaction flow, balancing responsiveness, stability, and scalability within the application.",
+    ],
+  },
+  "carnauol-metaverse": {
+    projectDate: "2023",
+    presentationImage: carnauolMetaversePresentationImage,
+    extendedDescription: "The experience features multiple brand-sponsored universes, each offering interactive mini-games based on familiar real-world activities adapted to the virtual environment. Built on a proprietary platform developed in a short time frame, the project served as a pilot to test new formats for social interaction, gamified brand engagement, and immersive storytelling, with the goal of expanding similar experiences to other cultural celebrations in the future.\n\nFrom a technical perspective, this project marked the first time the team adopted a ScriptableObject-oriented architecture, which influenced how game logic, configurations, and behaviors were structured and reused across mini-games. This approach helped improve modularity, data-driven design, and iteration speed during development, especially in a fast-paced project with multiple interactive experiences running within the same platform.",
+    technicalDetails: [
+      { label: "Tools", value: "Unity, Git, Jira (Project Management and Repository)" },
+      { label: "Feats", value: "Scriptable Object Driven Architecture" },
+      { label: "Type", value: "Advertising" },
+      { label: "Company", value: "Compass.UOL" },
+      { label: "Time Range", value: "2 Months" },
+      { label: "Team Size", value: "9 (1 Project Manager, 1 Tech Lead, 3 Programmers, 2 3D Modellers, 1 Concept Artist, 1 Tech Artist, 1 UI Artist)" },
+    ],
+    externalLinks: [
+      { label: "Read more about it in this article", url: "https://www.uol.com.br/splash/especiais/conteudo-de-marca/uol-folia-no-metaverso.htm" },
+      { label: "Scriptable Object Architecture", url: "https://github.com/DanielEverland/ScriptableObject-Architecture" },
     ],
   },
 };
