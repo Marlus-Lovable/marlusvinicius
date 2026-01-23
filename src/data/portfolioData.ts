@@ -6,10 +6,8 @@ import arezzoWebarTourImage from "@/assets/projects/arezzo-webar-tour.gif";
 import arezzoRef0 from "@/assets/projects/arezzo-ref-0.jpg";
 import arezzoRef1 from "@/assets/projects/arezzo-ref-1.jpg";
 import digital3dAssistantImage from "@/assets/projects/digital-3d-assistant.png";
-
-// Placeholder images for new projects (images need to be uploaded)
-const carnauolMetaverseImage = "/placeholder.svg";
-const codeConduitImage = "/placeholder.svg";
+import carnauolMetaverseImage from "@/assets/projects/carnauol.gif";
+import codeConduitImage from "@/assets/projects/CodeConduit.png";
 
 export const personalInfo = {
   name: "Marlus Vinicius",
