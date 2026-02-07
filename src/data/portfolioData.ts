@@ -8,6 +8,10 @@ import arezzoRef1 from "@/assets/projects/arezzo-ref-1.jpg";
 import digital3dAssistantImage from "@/assets/projects/digital-3d-assistant.png";
 import carnauolMetaverseImage from "@/assets/projects/carnauol.gif";
 import codeConduitImage from "@/assets/projects/CodeConduit.png";
+import algorenaImage from "@/assets/projects/algorena.png";
+import sarahsRootsImage from "@/assets/projects/sarahs-roots.gif";
+import stormingCastleImage from "@/assets/projects/storming-castle.png";
+import lostLinkImage from "@/assets/projects/lost-link.png";
 
 export const personalInfo = {
   name: "Marlus Vinicius",
@@ -114,6 +118,51 @@ export const projects = [
     description: "A sci-fi action game and final graduation project that blends fast-paced hack-and-slash combat with puzzle gameplay. Players control Luden, a robot navigating a dystopian world while shifting between a physical reality and a stylized cyber space that symbolizes hacking and self-discovery.",
     tags: ["Unity", "Game", "Academic", "Puzzle", "Hack 'n Slash", "Sci Fi"],
     image: codeConduitImage,
+    videoUrl: null,
+  },
+  {
+    id: 8,
+    title: "Algorena",
+    slug: "algorena",
+    description: "Educational multiplayer party game designed to introduce children to algorithmic thinking and basic programming concepts in a fun and accessible way. The experience supports local multiplayer for up to four players, who compete by building and executing simple algorithms to outplay one another.",
+    tags: ["Unity", "Game", "Academic", "Local Multiplayer", "Educational"],
+    image: algorenaImage,
+    videoUrl: null,
+  },
+  {
+    id: 9,
+    title: "Sarah's Roots",
+    slug: "sarahs-roots",
+    description: "Point-and-click puzzle game created for Global Game Jam 2023, based on the theme \"Roots.\" The game follows Sarah as she tries to recover her fading memories and reconnect with her family, with players uncovering story fragments through environmental interactions.",
+    tags: ["Unity", "Game", "Jam", "Point N Click", "2D", "Puzzle"],
+    image: sarahsRootsImage,
+    videoUrl: null,
+  },
+  {
+    id: 10,
+    title: "Storming Castle Frankenstein",
+    slug: "storming-castle-frankenstein",
+    description: "Single-player FPS with a low-poly visual style inspired by 1920s horror films. Players take on the role of Van Helsing as he storms Dr. Frankenstein's castle to uncover the fate of his missing wife, facing grotesque flesh and mechanical creatures along the way. The experience blends fast-paced shooting with atmospheric exploration, offering a short to mid-length campaign and a variety of weapons discovered throughout the journey.",
+    tags: ["Unity", "Game", "Academical", "FPS", "Shooter"],
+    image: stormingCastleImage,
+    videoUrl: null,
+  },
+  {
+    id: 11,
+    title: "Lost Link",
+    slug: "lost-link",
+    description: "2D cooperative puzzle-platformer designed for local multiplayer, where two players control split halves of the same spirit—one red and one blue. To progress, players must communicate and coordinate their actions, synchronizing jumps and interactions with the environment to solve puzzles that can only be completed through teamwork and precise timing.",
+    tags: ["Unity", "Game", "Academical", "2D", "Platformer", "Puzzle", "Local Multiplayer", "Co-op"],
+    image: lostLinkImage,
+    videoUrl: null,
+  },
+  {
+    id: 12,
+    title: "Physics-Based Game Feel Experiments",
+    slug: "physics-game-feel-experiments",
+    description: "Collection of small prototype projects focused on exploring how computational physics can enhance the feel and responsiveness of game mechanics. The experiments include recreating classic 2D platformer movement techniques such as coyote time and acceleration smoothing, simulating inverse kinematics for creature movement, modeling explosion effects based on environmental factors, and replicating collective behaviors like fish schools and bird migrations.",
+    tags: ["Unity", "Physics", "Game Feel", "Academical", "Experiments"],
+    image: undefined,
     videoUrl: null,
   },
 ];
